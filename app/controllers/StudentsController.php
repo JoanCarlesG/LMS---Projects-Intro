@@ -18,5 +18,5 @@
 
     // 2. Pintaremos Grid:
     header("Location: ../views/StudentsView.php");    /* Redirect browser */
-
+    
 ?>
