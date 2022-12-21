@@ -6,16 +6,23 @@
         <h1 class="mb-2 text-2xl">Welcome to LMS Learning Management System</h1>
         <span class="text-gray-300">Enter Login Details</span>
       </div>
-      <form action= "loadContent(teachercheck)">
+      <form action="index.php?page=teacherscheck" method="post">
         <div class="mb-4 text-lg">
-          <input class="rounded-3xl border-none bg-yellow-400 bg-opacity-50 px-6 py-2 text-center text-inherit placeholder-slate-200 shadow-lg outline-none backdrop-blur-md" type="text" name="name" placeholder="id@email.com" />
+          <input name="inpUsr" class="rounded-3xl border-none bg-yellow-400 bg-opacity-50 px-6 py-2 text-center text-inherit placeholder-slate-200 shadow-lg outline-none backdrop-blur-md" type="text" name="name" placeholder="id@email.com" />
         </div>
 
         <div class="mb-4 text-lg">
-          <input class="rounded-3xl border-none bg-yellow-400 bg-opacity-50 px-6 py-2 text-center text-inherit placeholder-slate-200 shadow-lg outline-none backdrop-blur-md" type="Password" name="name" placeholder="*********" />
+          <input name="inpPwd" class="rounded-3xl border-none bg-yellow-400 bg-opacity-50 px-6 py-2 text-center text-inherit placeholder-slate-200 shadow-lg outline-none backdrop-blur-md" type="Password" name="name" placeholder="*********" />
         </div>
         <div class="mt-8 flex justify-center text-lg text-black">
-          <button type="submit" class="rounded-3xl bg-yellow-400 bg-opacity-50 px-10 py-2 text-white shadow-xl backdrop-blur-md transition-colors duration-300 hover:bg-yellow-600">Login</button>
+          <button type="submit" class="rounded-3xl bg-yellow-400 bg-opacity-50 px-10 py-2 text-white shadow-xl backdrop-blur-md transition-colors duration-300 hover:bg-yellow-600">ENTER</button>
+        </div>
+        <div>
+          <?php 
+              if (isset($_POST['inpName'])){
+                  echo '<span class="mt-4"> <a class="text-lg font-bold justify-end text-red-600 hover:underline" href="adduser">Usuari no trobat. Vols registrar-te?</a></span>';
+              }
+          ?>                    
         </div>
       </form>
     </div>
