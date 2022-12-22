@@ -26,14 +26,14 @@
 // ATENCION: esta estructura no tiene array routes, es simple, por tanto NO podemos indicar la función concreta 
 //           a ejecutar a dentro del xxxController.php
 //           ... por tanto, solución rápida: poner varios xxxController con una sola función correspondiente dentro.
-echo "estoy en router";
-    exit;
 
 function loadContent($id_page) {
     if((!isset($id_page)) || $id_page=="") {
         $id_page="";
     }
-    
+
+    // DEBUG:
+    // echo "<br>estoy en router, id_page=" . $id_page . "<br>";
 
     switch ($id_page) {
 
@@ -47,10 +47,11 @@ function loadContent($id_page) {
 
         // un caso para ir a COMPRUEBA-LOGIN-PROFESOR (dentro tendrá una sola function searchByName() { return array de 1 registro (o cero) de tabla Teachers}  )
         //    OJO aquí llamará a TeacherController que de momento solo un ECHO y un "Location reload:StudentsView.php" <-- un html de grid students
-        case "/teachercheck":
+        case "teacherscheck":
 
-            echo "dentro del switch: " . $id_page;
-            exit;
+            // DEBUG: 
+            // echo "dentro del switch: " . $id_page;
+            // exit;
         
             include('app\controllers\TeacherController.php');
             
@@ -64,7 +65,7 @@ function loadContent($id_page) {
                         
         // un caso para ir a SINGLE-ESTUDIANTE (dentro tendrá 1 sola function searchById() { return array con una sola posición llenada con 1 registro}  )
         case "studentdetails":
-            include('app/controllers/StudentController.php');
+            include('app/controllers/SingleStudentController.php');
             break;                            
 
         // un caso para ir a LISTA-EJERCICIOS (dentro tendrá 1 sola function searchAll() { return array de N registros Students_Make_Exercises filtrado por id_student AND id_exercise}  )

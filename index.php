@@ -1,5 +1,10 @@
-<!DOCTYPE html>
-<?php include('inc/router.php');?>
+
+<!-- INI of our HTML -->
+<?php
+include("header.php");
+include('inc/router.php');
+?>
+
 <?php 
     $page = "";
     if(isset($_GET['page'])) {
@@ -9,6 +14,7 @@
         $page="";
     }
 ?>
+
 <html lang="es">
   <head>
     <meta charset="utf-8">
@@ -18,7 +24,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="favicon.ico">
-    <title>Your website</title>
+    <title>LMS System</title>
+    <!-- cdn per incorporar Tailwind al projecte  -->
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
      <div class="container">

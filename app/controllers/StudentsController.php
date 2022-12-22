@@ -4,6 +4,8 @@
     echo "1. buscaremos Datos Students (usando métodos de StudentsModel.php) <br>";
     echo "2. pintaremos Grid Students (redireccionando al StudentsView.php) <br><br>";
 
+    // exit;
+
     // ANALISIS - PSEUDO-CODIGO:
 
     // 1. Buscaremos Datos:
@@ -17,6 +19,6 @@
     // return de $arrStudents
 
     // 2. Pintaremos Grid:
-    header("Location: ../views/StudentsView.php");    /* Redirect browser */
+    header("Location: app/views/studentsView.php");    /* Redirect browser */
 
 ?>
