@@ -1,14 +1,27 @@
 <?php 
 class Exercise{
     //Attributes
-    public $title = "";
-    public $subject = "";
-    public $exercise = "";
-    public $module = "";
-    public $grade = 0.0;
-    public $deliveryDate = "";
-    public $attach = "";
+    private $_title;
+    private $_subject;
+    private $_exercise;
+    private $_module;
+    private $_grade;
+    private $_deliveryDate;
+    private $_attach;
+
+    private $_arrExercises;
     
+    //CONSTRUCTOR:
+    public function __construct($title,$subject,$exercise,$module,$grade, $deliveryDate, $attach){
+        $this->_title = $title;
+        $this->_subject = $subject;
+        $this->_exercise = $exercise;
+        $this->_module = $module;
+        $this->_grade = $grade;
+        $this->_deliveryDate = $deliveryDate;
+        $this->_attach = $attach;
+    }
+
     //Getters
     public function getTitle($id_student, $id_exercise){
         $sql = "SELECT title FROM exercises RIGHT JOIN student_make_exercises ON id_mak_exe = id_exercise WHERE id_mak_stu = $id_student AND id_mak_exe = $id_exercise";
@@ -34,14 +47,8 @@ class Exercise{
     
     //Methods
 
-    public function getAll($id_student, $id_exercise){
-        self::getTitle($id_student, $id_exercise);
-        self::getSubject($id_student, $id_exercise);
-        self::getExercise($id_student, $id_exercise);
-        self::getModule($id_student, $id_exercise);
-        self::getGrade($id_student, $id_exercise);
-        self::getDelivery($id_student, $id_exercise);
-        self::getAttach($id_student, $id_exercise);
+    public function getAllStats($id_student, $id_exercise){
+        
     }
 
 }
