@@ -50,10 +50,10 @@ function loadContent($id_page) {
         case "teacherscheck":
 
             // DEBUG: 
-            // echo "dentro del switch: " . $id_page;
-            // exit;
+            //echo "dentro del switch: " . $id_page;
+            //exit;
         
-            include('app\controllers\TeacherController.php');
+            include('app/controllers/TeacherController.php');
             
             break;                            
 

@@ -3,7 +3,7 @@
     $nomServerBaseDeDades = "localhost";
     $nomUsuariBaseDeDades = "root";
     $pwdUsuariBaseDeDades = "";
-    $nomNostraBaseDeDades = "lms";
+    $nomNostraBaseDeDades = "LMS";
 
     // crear objecte cnn de tipus class mysqli(server,user,pwd,nameBD)
     //      també es pot fer:  $cnn = mysqli_connect('localhost','root','','php_mysql_crud');

@@ -4,7 +4,7 @@
     echo "1. buscaremos Datos Teachers (usando métodos de TeacherModel.php) <br>";
     echo "2.1. SI EXISTE el profe -> pintaremos Grid Students (redireccionando al StudentsView.php) <br><br>";
     echo "2.2. SI NO EXISTE el profe -> pintamos Login Profe (redireccionando al Login.php) <br><br>";
-
+    
     // ANALISIS - PSEUDO-CODIGO:
 
     // 1. Buscaremos Datos:

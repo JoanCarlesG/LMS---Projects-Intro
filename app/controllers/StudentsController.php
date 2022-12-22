@@ -19,7 +19,7 @@
     // return de $arrStudents
 
     // 2. Pintaremos Grid:
-    header("Location: ../views/StudentsView.php");    /* Redirect browser */
+    header("Location: app/views/studentsView.php");    /* Redirect browser */
     
 
 ?>
