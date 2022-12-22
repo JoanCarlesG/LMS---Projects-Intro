@@ -9,9 +9,9 @@
 
     // 1. Buscaremos Datos:
 
-    echo "<br> buscando datos... <br>";
-    exit;
-
+    // DEBUG:
+    echo "<br> en TeacherCheck.php ... buscando datos... <br>";
+  
     // include "../models/TeacherModel.php";
     // $arrTeachers --> será un array de objetos en donde cada objeto será un PROFESOR con campos definidos en el Model
     // por tanto: 
@@ -26,12 +26,14 @@
     
     // 2.1. Si Existe -> Pintaremos Grid (mostramos StudentsView.php ruta /studentslist ):
 
-    if (teacherCheck()!=NULL){
-        header("Location: ../views/StudentsView.php");    /* Redirect browser */
+    header("Location: index.php?page=studentslist");
+
+    // if (teacherCheck()!=NULL){
+    //     header("Location: studentslist");
 
     // 2.2. Si NO existe -> volvemos a Login view:
-    }else{
-        header("Location: ../views/Login.php");    /* Redirect to LOGIN mostrando mens "no existe, desea registrar?"  */
-    }
+    // }else{
+    //     header("Location: index");    /* Redirect to LOGIN mostrando mens "no existe, desea registrar?"  */
+    // }
 
 ?>
