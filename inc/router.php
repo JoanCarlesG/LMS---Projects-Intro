@@ -66,12 +66,17 @@ function loadContent($id_page) {
         // un caso para ir a SINGLE-ESTUDIANTE (dentro tendrá 1 sola function searchById() { return array con una sola posición llenada con 1 registro}  )
         case "studentdetails":
             include('app/controllers/SingleStudentController.php');
-            break;                            
+            break;      
+        
+        case "app/views/singlestudentview":
+            include('app/views/singleStudentsView.php');
+            break;  
 
         // un caso para ir a LISTA-EJERCICIOS (dentro tendrá 1 sola function searchAll() { return array de N registros Students_Make_Exercises filtrado por id_student AND id_exercise}  )
         case "exerciseslist":
             include('app/controllers/ExercisesController.php');
-            break;            
+            break;    
+    
             
         // mensaje página no encontrada
         default:
